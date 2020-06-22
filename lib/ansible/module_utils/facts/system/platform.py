@@ -72,6 +72,7 @@ class PlatformFactCollector(BaseFactCollector):
                 platform_facts['userspace_architecture'] = 'i386'
         else:
             platform_facts['architecture'] = platform_facts['machine']
+            platform_facts['userspace_architecture'] = platform_facts['machine']
 
         if platform_facts['system'] == 'AIX':
             # Attempt to use getconf to figure out architecture
